@@ -8,6 +8,14 @@ body{
     justify-content: center;
 
 }
+#icon{
+    /* float: right; */
+        display: none;
+    position: absolute;
+    top: -30px;
+    right: 30px;
+    width:120px ;
+}
 .container{
     background-image: linear-gradient(to bottom right,#f5f5f5,#d3d4d9) ;
     display: grid;
@@ -25,7 +33,7 @@ body{
     padding: 2rem 2.5rem;
     border-radius: 0.5rem;
 }
-.box img{
+#profile{
     border-radius: 50%;
     border: 3px solid hsl(264, 82%, 80%) ;
     margin-right:1rem ;
@@ -37,14 +45,18 @@ body{
     margin-bottom: 0.2rem;
 }
 .head{
+    position: relative;
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
 }
 h2{
     margin-bottom: 1rem;
+     position: relative;
+    z-index: 2;
 }
 .box p{
+   
     color:hsl(0, 0%, 81%);
 }
 .box h2{
@@ -53,8 +65,9 @@ h2{
 .box2{
     background-color: hsl(217, 19%, 35%);
 }
-.box2 img,.box3 img,.box5 img{
+.box2 #profile,.box3 #profile,.box5 #profile{
     border: none;
+    max-width: 38px;
 }
 .box3,.box5{
     background-color: white;
@@ -72,7 +85,7 @@ h2{
 background-color: hsl(219, 29%, 14%);
 }
 
-@media (width>900px) {
+@media (width>1000px) {
     .container{
         grid-template-columns: repeat(4,1fr);
     }
@@ -88,5 +101,9 @@ background-color: hsl(219, 29%, 14%);
     .box4{
         grid-column-start:span 2 ;
     }
+    #icon{
+        display: unset;
+    }
+   
 }
 
